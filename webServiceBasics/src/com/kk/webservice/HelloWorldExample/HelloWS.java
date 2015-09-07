@@ -6,8 +6,8 @@ import javax.jws.WebService;
 public class HelloWS implements HelloInterface {
 
 	@Override
-	public String sayHello(String name) {
-		return "Hello" + name + "!!";
+	public String sayHello(String firstName) {
+		return "Hello" + firstName + "!!";
 	}
  
 }

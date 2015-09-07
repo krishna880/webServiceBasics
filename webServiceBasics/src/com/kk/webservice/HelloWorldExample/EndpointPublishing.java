@@ -5,7 +5,6 @@ import javax.xml.ws.Endpoint;
 // This class is used to publish a web service internally in JVM
 // After running this class, you can also check the wsdl at http://localhost:9999/hello?WSDL
 public class EndpointPublishing {
-
 	//defining URI
 	public static final String URI = "http://localhost:9999/hello";
 	
