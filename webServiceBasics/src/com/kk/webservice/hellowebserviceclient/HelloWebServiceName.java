@@ -1,5 +1,5 @@
 
-package com.kk.webservices.hellowebserviceclient;
+package com.kk.webservice.hellowebserviceclient;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "HelloWebServiceName", targetNamespace = "http://HelloWebServiceClient.webservices.kk.com", wsdlLocation = "http://localhost:9998/hello?wsdl")
+@WebServiceClient(name = "HelloWebServiceName", targetNamespace = "http://HelloWebServiceClient.webservice.kk.com", wsdlLocation = "http://localhost:9998/hello?wsdl")
 public class HelloWebServiceName
     extends Service
 {
 
     private final static URL HELLOWEBSERVICENAME_WSDL_LOCATION;
     private final static WebServiceException HELLOWEBSERVICENAME_EXCEPTION;
-    private final static QName HELLOWEBSERVICENAME_QNAME = new QName("http://HelloWebServiceClient.webservices.kk.com", "HelloWebServiceName");
+    private final static QName HELLOWEBSERVICENAME_QNAME = new QName("http://HelloWebServiceClient.webservice.kk.com", "HelloWebServiceName");
 
     static {
         URL url = null;
@@ -65,11 +65,11 @@ public class HelloWebServiceName
     /**
      * 
      * @return
-     *     returns HelloInterface
+     *     returns HelloInterface1
      */
     @WebEndpoint(name = "HelloWebSvcPort")
-    public HelloInterface getHelloWebSvcPort() {
-        return super.getPort(new QName("http://HelloWebServiceClient.webservices.kk.com", "HelloWebSvcPort"), HelloInterface.class);
+    public HelloInterface1 getHelloWebSvcPort() {
+        return super.getPort(new QName("http://HelloWebServiceClient.webservice.kk.com", "HelloWebSvcPort"), HelloInterface1.class);
     }
 
     /**
@@ -77,11 +77,11 @@ public class HelloWebServiceName
      * @param features
      *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
      * @return
-     *     returns HelloInterface
+     *     returns HelloInterface1
      */
     @WebEndpoint(name = "HelloWebSvcPort")
-    public HelloInterface getHelloWebSvcPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://HelloWebServiceClient.webservices.kk.com", "HelloWebSvcPort"), HelloInterface.class, features);
+    public HelloInterface1 getHelloWebSvcPort(WebServiceFeature... features) {
+        return super.getPort(new QName("http://HelloWebServiceClient.webservice.kk.com", "HelloWebSvcPort"), HelloInterface1.class, features);
     }
 
     private static URL __getWsdlLocation() {
