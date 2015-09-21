@@ -9,7 +9,7 @@ import javax.xml.ws.Service;
 
 import com.kk.webservice.HelloWorldExample.HelloInterface;
 
-// This class call the Hello world web service
+// This class call the Hello world web service defined in HelloWS.java
 public class Example_1 {
 
 	public static void main(String[] args) throws MalformedURLException {
