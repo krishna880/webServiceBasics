@@ -18,6 +18,8 @@ import javax.xml.ws.Service;
 
 public class Example1 {
 
+	
+	//This class call the Hello world web service from SAAJ level i.e. ground level.
 	public static void main(String[] args) throws SOAPException, IOException {
 
 		try {
