@@ -1,4 +1,4 @@
-package com.kk.webservice.SAAJExamples;
+package com.kk.webservice.JAXWSExamples;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -10,7 +10,7 @@ import javax.xml.ws.Service;
 import com.kk.webservice.HelloWorldExample.HelloInterface;
 
 // This class call the Hello world web service
-public class Example2 {
+public class Example_1 {
 
 	public static void main(String[] args) throws MalformedURLException {
 		URL wsdl = new URL("http://localhost:9999/hello?WSDL");
