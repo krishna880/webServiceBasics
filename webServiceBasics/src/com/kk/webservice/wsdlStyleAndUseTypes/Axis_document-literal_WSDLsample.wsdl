@@ -1,0 +1,48 @@
+<!-- *************************Important note below************************************** -->
+<!-- This wsdl doc was created with SOAP binding STYLE as "document" and SOAP body USE as "literal" -->
+
+<wsdl:definitions xmlns:apachesoap="http://xml.apache.org/xml-soap"
+	xmlns:impl="http://JAXRPCExamples.webservice.kk.com" xmlns:intf="http://JAXRPCExamples.webservice.kk.com"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://JAXRPCExamples.webservice.kk.com">
+	<!-- WSDL created by Apache Axis version: 1.4 Built on Apr 22, 2006 (06:55:48 
+		PDT) -->
+	<wsdl:types>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema"
+			elementFormDefault="qualified" targetNamespace="http://JAXRPCExamples.webservice.kk.com">
+			<element name="firstName" type="xsd:string" />
+			<element name="sayHelloReturn" type="xsd:string" />
+		</schema>
+	</wsdl:types>
+	<wsdl:message name="sayHelloRequest">
+		<wsdl:part element="impl:firstName" name="firstName"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sayHelloResponse">
+		<wsdl:part element="impl:sayHelloReturn" name="sayHelloReturn"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="HelloWS2">
+		<wsdl:operation name="sayHello" parameterOrder="firstName">
+			<wsdl:input message="impl:sayHelloRequest" name="sayHelloRequest"></wsdl:input>
+			<wsdl:output message="impl:sayHelloResponse" name="sayHelloResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="HelloWS2SoapBinding" type="impl:HelloWS2">
+		<wsdlsoap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="sayHello">
+			<wsdlsoap:operation soapAction="" />
+			<wsdl:input name="sayHelloRequest">
+				<wsdlsoap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="sayHelloResponse">
+				<wsdlsoap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="HelloWS2Service">
+		<wsdl:port binding="impl:HelloWS2SoapBinding" name="HelloWS2">
+			<wsdlsoap:address
+				location="http://localhost:8080/WebServiceProject/services/HelloWS2" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
